@@ -15,7 +15,7 @@ namespace Entity.Concrete
         public decimal Price { get; set; }
         public decimal Stock { get; set; }
         public string Explanation { get; set; }
-        //public List<Basket> Baskets { get; set; }
+        public List<Basket> Baskets { get; set; }
         public bool Status { get; set; }
 
     }

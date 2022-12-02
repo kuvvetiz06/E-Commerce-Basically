@@ -14,7 +14,7 @@ namespace Entity.Concrete
         public string Username { get; set; }
         public string Password { get; set; }
         public DateTime? BirthDate { get; set; }
-        //public List<Basket> Baskets { get; set; }
+        public List<Basket> Baskets { get; set; }
         public bool Status { get; set; }
 
 
