@@ -1,4 +1,10 @@
-﻿using E_Commerce_Basically.Models;
+﻿using Business.Concrete;
+using DAL.Concrete;
+using DAL.Entity;
+using E_Commerce_Basically.Models;
+using Entity.Concrete;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -11,6 +17,9 @@ namespace E_Commerce_Basically.Controllers
 {
     public class HomeController : Controller
     {
+
+        UserManager Um = new UserManager(new EfUserRepository());
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -18,14 +27,33 @@ namespace E_Commerce_Basically.Controllers
             _logger = logger;
         }
 
+
+        [AllowAnonymous]
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult Index(User s)
         {
-            return View();
+            Context Cnt = new Context();
+
+            var UserCheck = Cnt.Users.SingleOrDefault(x => x.Username == s.Username && x.Password == s.Password);
+
+            if(UserCheck != null)
+            {
+                HttpContext.Session.SetString("id", UserCheck.UserID.ToString());
+                return RedirectToAction("Index", "Product");
+            }
+            else
+            {
+                return View();
+            }
+
+            
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
