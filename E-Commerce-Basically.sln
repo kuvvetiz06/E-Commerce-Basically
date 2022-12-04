@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33027.164
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Commerce-Basically", "E-Commerce-Basically\E-Commerce-Basically.csproj", "{51128E18-8644-44AE-8A7D-F46DFD8F1684}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-Commerce-Basically", "E-Commerce-Basically\E-Commerce-Basically.csproj", "{51128E18-8644-44AE-8A7D-F46DFD8F1684}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{D1250335-21A4-4930-8B98-F13097BC146C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "DAL\DAL.csproj", "{D1250335-21A4-4930-8B98-F13097BC146C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{75A76F12-16A9-48BA-B7CE-D05AD36FE410}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{75A76F12-16A9-48BA-B7CE-D05AD36FE410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{855ED109-3181-4784-ABA8-F45962B50FE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business", "Business\Business.csproj", "{855ED109-3181-4784-ABA8-F45962B50FE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{E95F36C5-59A1-4D2A-9138-1F28A51557A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{E95F36C5-59A1-4D2A-9138-1F28A51557A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketApi", "BasketApi\BasketApi.csproj", "{0D5451B6-EE6E-4932-8E70-AED885F03F5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E95F36C5-59A1-4D2A-9138-1F28A51557A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E95F36C5-59A1-4D2A-9138-1F28A51557A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E95F36C5-59A1-4D2A-9138-1F28A51557A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D5451B6-EE6E-4932-8E70-AED885F03F5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5451B6-EE6E-4932-8E70-AED885F03F5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5451B6-EE6E-4932-8E70-AED885F03F5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5451B6-EE6E-4932-8E70-AED885F03F5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

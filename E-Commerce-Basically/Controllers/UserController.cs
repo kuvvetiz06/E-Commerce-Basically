@@ -3,6 +3,7 @@ using Business.ValidRules;
 using DAL.Entity;
 using Entity.Concrete;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -22,12 +23,14 @@ namespace E_Commerce_Basically.Controllers
 
             return View(UserList);
         }
+        [AllowAnonymous]
         [HttpGet]
         public IActionResult Register()
         {
 
             return View();
         }
+        [AllowAnonymous]
         [HttpPost]
         public IActionResult Register(User u)
         {
