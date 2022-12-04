@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Abstract
 {
-    interface IBasketDal:IGenericDal<Basket>
+   public interface IBasketDal:IGenericDal<Basket>
     {
+        List<Basket> GetListWithUserAndProduct(int User);
     }
 }

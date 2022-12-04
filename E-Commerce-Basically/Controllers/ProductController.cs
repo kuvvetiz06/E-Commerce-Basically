@@ -9,15 +9,25 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Basically.Controllers
 {
-
+    [Authorize]
     public class ProductController : Controller
     {
-        UserManager Um = new UserManager(new EfUserRepository());
-        
+        ProductManager Pm = new ProductManager(new EfProductRepository());
+
         public IActionResult Index()
         {
 
             return View();
+        }
+
+      
+        [HttpPost]
+        public JsonResult GetProductData()
+        {
+
+            var data = Pm.GetAllList();                  
+
+            return Json(new { data });
         }
     }
 }

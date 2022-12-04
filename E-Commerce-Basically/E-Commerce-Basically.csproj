@@ -6,8 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\js\ProductPageJS\**" />
+    <Content Remove="wwwroot\js\ProductPageJS\**" />
+    <EmbeddedResource Remove="wwwroot\js\ProductPageJS\**" />
+    <None Remove="wwwroot\js\ProductPageJS\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentValidation" Version="10.3.3" />
     <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.3" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
       <PrivateAssets>all</PrivateAssets>
@@ -25,10 +33,6 @@
     <ProjectReference Include="..\Business\Business.csproj" />
     <ProjectReference Include="..\DAL\DAL.csproj" />
     <ProjectReference Include="..\Entity\Entity.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\js\ProductPageJS\" />
   </ItemGroup>
 
 </Project>

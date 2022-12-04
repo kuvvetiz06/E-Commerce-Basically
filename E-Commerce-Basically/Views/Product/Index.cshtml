@@ -1,8 +1,27 @@
 ﻿
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Ürün Listesi";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>Index</h1>
+<h1>Ürün Listesi</h1>
+<div>
+    <table class="table table-hover table-checkable table-sm table-condensed nowrap" cellspacing="0" style="width:100%" id="Product_List">
+        <thead>
+            <tr>
+                <th>Ürün Adı</th>
+                <th>Fiyat</th>
+                <th>Stok</th>
+                <th>Açıklama</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+@section Scripts
+{
 
+    <script src="~/js/Product/ProductIndex.js"></script>
+
+
+}

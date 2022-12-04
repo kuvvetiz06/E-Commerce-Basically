@@ -3,6 +3,7 @@ using DAL.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -34,6 +35,8 @@ namespace DAL.Repositories
             return Cntx.Set<T>().ToList();
         }
 
+       
+
         public T GetByID(int id)
         {
             using var Cntx = new Context();
@@ -55,6 +58,12 @@ namespace DAL.Repositories
                 throw;
             }
 
+        }
+
+        public List<T> GetAllList(Expression<Func<T, bool>> filter)
+        {
+            using var Cntx = new Context();
+            return Cntx.Set<T>().Where(filter).ToList();
         }
 
         public void Update(T t)
